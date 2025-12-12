@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+
+@theme {
+  --color-primary: #ff8901;
+  --color-secondary: #fb923c;
+}
+
+:root {
+  color-scheme: light;
+  background-color: #ffffff; /* Light mode background */
+  color: #000000; /* Light text */
+}
+
+.dark {
+  color-scheme: dark;
+  background-color: #0f172a; /* Slate-900 or any dark bg you prefer */
+  color: #ffffff; /* Dark text */
+}
+
