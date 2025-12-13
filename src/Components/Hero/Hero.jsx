@@ -16,11 +16,11 @@ export const Hero = () => {
     pauseOnFocus: true,
   };
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px]  flex items-center justify-center ">
+    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px]  flex items-center justify-center  text-black dark:text-white bg-white dark:bg-gray-800">
       {/* background patter */}
       <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-9"></div>
       {/* hero section */}
-      <div className="container pb-8 sm:pb-0">
+      <div className="container mx-auto pb-8 sm:pb-0">
         <Slider {...settings}>
           {heroData.map((hero) => (
             <div>
@@ -50,7 +50,7 @@ export const Hero = () => {
                   >
                     <button
                       className="bg-gradient-to-r from-primary to-secondary transition-all duration-200
-             text-white px-4 py-2 rounded-full flex items-center gap-3 hover:scale-105"
+                      text-white px-4 py-2 rounded-full flex items-center gap-3 hover:scale-105"
                     >
                       Order Now
                     </button>

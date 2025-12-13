@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Product from './Components/Product/product';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import TopProducts from './Components/TopProducts/TopProducts';
+import Banner from './Components/Banner/Banner';
 
 
 
@@ -22,12 +24,14 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className=" text-black dark:text-white bg-white dark:bg-gray-800">
       <Navbar />
       <Hero />
-      <Product/>
+      <Product />
+      <TopProducts />
+      <Banner/>
     </div>
-  )
+  );
 }
 
 export default App

@@ -9,9 +9,9 @@ import { dropdownLinks } from '../../constant/dropdownLinks';
 
 function Navbar() {
   return (
-    <div className="shadow-md duration-200 relative z-48">
+    <div className="shadow-md duration-200 relative z-48  text-black dark:text-white bg-white dark:bg-gray-800">
       {/* Upper Navbar */}
-      <div className="bg-primary/40 py-2 ">
+      <div className="bg-primary/40 py-2">
         <div className="p-4 sm:p-12 flex justify-between items-center">
           <div>
             <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
@@ -26,7 +26,7 @@ function Navbar() {
                 type="text"
                 placeholder="Search"
                 className="w-[180px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border focus:border-primary bg-white
-                 text-black "
+                 text-black dark:text-white dark:bg-gray-800"
               />
 
               <CiSearch
@@ -66,27 +66,25 @@ function Navbar() {
               </a>
             </li>
           ))}
-          <li className='group relative cursor-pointer'>
-            <a
-              href="#"
-              className="flex items-center py-2 gap-0.5"
-            >
+          <li className="group relative cursor-pointer">
+            <a href="#" className="flex items-center py-2 gap-0.5">
               Trending Products
               <span>
-                <FaCaretDown className='transition-all duration-200 group-hover:rotate-180'/>
+                <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>
             </a>
-            <div className='absolute z-9999 hidden group-hover:block w-[150px] rounded-md  bg-white p-2 text-black shadow-md'>
+            <div className="absolute z-9999 hidden group-hover:block w-[150px] rounded-md  bg-white p-2 text-black shadow-md dark:bg-gray-800 dark:text-white">
               <ul>
-                {
-                  dropdownLinks.map((data) => (
-                    <li key={data.id}>
-                      <a href={data.link} className='inline-block w-full rounded-md p-2 hover:bg-primary/20'>
-                        {data.name}
-                      </a>
-                    </li>
-                  ))
-                }
+                {dropdownLinks.map((data) => (
+                  <li key={data.id}>
+                    <a
+                      href={data.link}
+                      className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
+                    >
+                      {data.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </li>
