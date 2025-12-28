@@ -7,17 +7,20 @@ export const productDataList = [
     title: "Casual Wear",
     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     img: img1,
+    rating: 4,
   },
   {
     id: 2,
     title: "Printed Shirts",
     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     img: img2,
+    rating: 5,
   },
   {
     id: 3,
     title: "Women Shirts",
     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     img: img3,
+    rating: 3,
   }
 ]

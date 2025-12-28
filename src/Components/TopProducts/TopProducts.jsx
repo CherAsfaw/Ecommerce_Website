@@ -3,7 +3,6 @@ import { CiStar } from "react-icons/ci";
 import { productDataList } from "../../constant/productDataList";
 
 function TopProducts() {
-  console.log(productDataList);
   return (
     <div>
       <div className="container mx-auto">
@@ -21,7 +20,7 @@ function TopProducts() {
           </p>
         </div>
         {/* body section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 justify-items-center">
           {productDataList.map((data) => (
             <div
               key={data.id}
@@ -41,18 +40,17 @@ function TopProducts() {
               <div className="p-4 text-center">
                 {/* star rating */}
                 <div className="flex items-center gap-1 justify-center w-full">
-                  <CiStar className="text-yellow-500" />
-                  <CiStar className="text-yellow-500" />
-                  <CiStar className="text-yellow-500" />
-                  <CiStar className="text-yellow-500" />
+                  {[...Array(data.rating)].map((_, index) => (
+                    <CiStar key={index} className="text-yellow-500" />
+                  ))}
                 </div>
                 <h1 className="text-xl font-bold">{data.title}</h1>
                 <p className="text-gray-400 group-hover:text-white duration-300 text-sm line-clamp-2">
                   {data.description}
                 </p>
                 <button
-                  className="bg-primary text-white duration-300 py-1 px-4 rounded-full mt-4 hover:scale-105 
-                  group-hover:bg-white group-hover:text-primary"
+                  className="bg-primary text-white duration-200 py-1 px-4 rounded-full mt-4 hover:scale-105 
+                  group-hover:bg-white group-hover:text-primary "
                 >
                   Order Now
                 </button>

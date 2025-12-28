@@ -47,6 +47,11 @@ function Product() {
               </div>
             ))}
           </div>
+          <div className="flex justify-center">
+            <button className="text-center mt-10 cursor-pointer bg-primary text-white py-2 px-6 rounded-full hover:scale-105 duration-300">
+              View All Products
+            </button>
+          </div>
         </div>
       </div>
     </div>
